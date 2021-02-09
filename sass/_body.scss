@@ -44,11 +44,10 @@ body {
     }
     
     #nav-search{
-        width: 100vw;
+        width: 100%;
         position: absolute;
-        z-index: 1;
-        top: -8px;
-    
+        top: -5px;
+        
         input{
             border: 0;
             width: 20rem;

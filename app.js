@@ -34,9 +34,9 @@ const list = document.querySelector('.shop-product');
   $(function(){
     $(window).scroll(function(){ 
       let num = $(this).scrollTop();
-      if( num > 400 ){  
+      if( num > 60 ){  
         $("#nav-search").css("position","fixed");
-        $("#nav-search").css("display","block");
+        $("#nav-search").css("display","flex");
       }else{
         $("#nav-search").css("position","absolute");
         $("#nav-search").css("display","none");
