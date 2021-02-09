@@ -209,8 +209,8 @@ body footer .main-nav2 a:hover {
 }
 
 .shop-page .shop-content .shop-product .product-img-hover-icon img:hover {
-  -webkit-filter: invert(50%);
-          filter: invert(50%);
+  -webkit-filter: hue-rotate(120deg) brightness(250%);
+          filter: hue-rotate(120deg) brightness(250%);
 }
 
 .shop-page .shop-content .shop-product .product-info {
