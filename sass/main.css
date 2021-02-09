@@ -10,8 +10,7 @@ body {
   background-image: url(/img/main-img.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-  height: auto;
+  background-attachment: fixed;
 }
 
 body .nav-bar {
@@ -105,11 +104,27 @@ body .main .main-content .shop-btn:hover {
   background-color: #D47F7F;
 }
 
-.shop-content {
+.shop-page {
+  padding-top: 3rem;
+}
+
+.shop-page .shop-content {
   padding: 2rem;
 }
 
-.shop-content .product-img-hover-icon {
+.shop-page .shop-content .shop-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.shop-page .shop-content .shop-product .product-img-hover-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,13 +135,13 @@ body .main .main-content .shop-btn:hover {
   padding: 1rem;
 }
 
-.shop-content .product-img-hover-icon img {
+.shop-page .shop-content .shop-product .product-img-hover-icon img {
   width: 4vw;
   height: auto;
   padding: 0.3rem;
 }
 
-.shop-content .product-info {
+.shop-page .shop-content .shop-product .product-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,16 +149,16 @@ body .main .main-content .shop-btn:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 20vw;
+  width: 23vw;
   padding: 1rem;
 }
 
-.shop-content .product-info img {
+.shop-page .shop-content .shop-product .product-info img {
   width: 100%;
   height: auto;
 }
 
-.shop-content .product-info span {
+.shop-page .shop-content .shop-product .product-info span {
   color: #002D4E;
   background-color: #FFA1A1;
   padding: 0.5rem;

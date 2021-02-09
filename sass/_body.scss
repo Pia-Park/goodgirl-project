@@ -11,8 +11,7 @@ body {
     background-image: url(/img/main-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: auto;
+    background-attachment: fixed;
 
     .nav-bar{
         @include row;
