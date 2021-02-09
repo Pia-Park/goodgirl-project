@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+body {
+  background-image: url(/img/main-img.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 1100px;
+}
+
+body .nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #FFA1A1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+}
+
+body .nav-bar img {
+  width: 15vw;
+  height: auto;
+}
+
+body .nav-bar .main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .nav-bar .main-nav li {
+  padding-right: 1rem;
+}
+
+body .nav-bar .main-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+body .nav-bar .main-nav a:hover {
+  color: #D47F7F;
+}
+
+body .main .main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10vh;
+  padding-left: 70vw;
+}
+
+body .main .main-content img {
+  width: 14rem;
+  height: auto;
+}
+
+body .main .main-content h1 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+body .main .main-content .shop-btn {
+  width: 12rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 0px solid;
+  color: #fff;
+  background-color: #FFA1A1;
+}
+
+body .main .main-content .shop-btn:hover {
+  background-color: #D47F7F;
+}
+/*# sourceMappingURL=main.css.map */

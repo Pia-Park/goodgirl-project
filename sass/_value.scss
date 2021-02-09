@@ -1,0 +1,22 @@
+
+$color-primary: #FFA1A1;
+$color-primary-deep: #D47F7F;
+
+$color-white: #fff;
+$color-grey: #C4C4C4;
+$color-dark-grey: #4D4B4B;
+$color-black: #0000;
+
+$color-blue: #002D4E;
+
+$work-sans: 'Work Sans', sans-serif;
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}

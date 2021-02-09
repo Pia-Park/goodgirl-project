@@ -1,0 +1,73 @@
+@import "./value";
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $work-sans;
+}
+
+body {
+    background-image: url(/img/main-img.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 1100px;
+    .nav-bar{
+        @include row;
+        background-color: $color-primary;
+        justify-content: space-between;
+        padding: 0.5rem;
+        img{
+            width: 15vw;
+            height: auto;
+        }
+        .main-nav{
+            @include row;
+            list-style: none;
+            align-items: center;
+            li{
+                padding-right: 1rem;
+            }
+            a{
+                color: $color-white;
+                text-decoration: none;
+                &:hover{
+                    color: $color-primary-deep;
+                }
+            }
+        }
+    }
+    
+    .main{
+
+        .main-content{
+            @include column;
+            align-items: center;
+            padding-top: 10vh;
+            padding-left: 70vw;
+            img{
+                width: 14rem;
+                height: auto;
+            }
+            h1{
+                color: $color-white;
+                font-size: 1.3rem;
+                font-weight: 300;
+                padding-bottom: 1rem;
+            }
+            .shop-btn{
+                width: 12rem;
+                padding: 0.8rem;
+                font-size: 1rem;
+                border: 0px solid;
+                color: $color-white;
+                background-color: $color-primary;
+                &:hover{
+                    background-color: $color-primary-deep;
+                }
+            }
+        }
+
+    }
+}
+
