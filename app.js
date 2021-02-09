@@ -26,7 +26,7 @@ const list = document.querySelector('.shop-product');
             <div class="cart-icon"><img src="img/carticon.png" alt="cart icon"></div>
         </div>
         <span>${title}</span>
-        <span>$${price}</span>`;
+        <span><b>$${price}</b></span>`;
         list.appendChild(prodInfo);
     });
   }
