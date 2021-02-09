@@ -12,6 +12,9 @@
                 width: 10rem;
                 img{
                     padding: 0.3rem;
+                    &:hover{
+                        filter: invert(50%);
+                    }
                 }
             
             }

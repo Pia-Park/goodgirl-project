@@ -140,6 +140,11 @@ body .main .main-content .shop-btn:hover {
   padding: 0.3rem;
 }
 
+.shop-page .shop-content .shop-product .product-img-hover-icon img:hover {
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
+}
+
 .shop-page .shop-content .shop-product .product-info {
   display: -webkit-box;
   display: -ms-flexbox;
