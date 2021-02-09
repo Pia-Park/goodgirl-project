@@ -1,16 +1,18 @@
+const API_JEW = 'https://fakestoreapi.com/products/category/jewelery';
+const API_WOM = 'https://fakestoreapi.com/products/category/women%20clothing';
 
 const product = document.querySelector('.product-info');
 const list = document.querySelector('.shop-product');
 
-  async function getData(){
-    const res = await fetch('https://fakestoreapi.com/products/category/women%20clothing')
+  async function getData(url){
+    const res = await fetch(url)
     const result = await res.json(); 
     console.log(result);
     showProducts(result);
 
   }
-
-  getData();
+  getData(API_WOM);
+  getData(API_JEW);
 
   function showProducts(products){
     products.forEach((prod)=>{
