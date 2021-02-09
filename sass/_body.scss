@@ -37,7 +37,7 @@ body {
                 color: $color-white;
                 text-decoration: none;
                 &:hover{
-                    color: $color-primary-deep;
+                    color: $color-blue;
                 }
             }
         }
@@ -99,6 +99,35 @@ body {
             }
         }
 
+    }
+
+    footer{
+        background-color: $color-blue;
+        p{
+            padding: 1rem;
+            color: $color-white;
+            font-weight: 100;
+            letter-spacing: 0.1rem;
+        }
+        .nav-bar{
+            background-color: $color-blue;
+        }
+        .main-nav2{
+            @include row;
+            list-style: none;
+            align-items: center;
+            li{
+                padding-right: 1rem;
+            }
+            a{
+                text-decoration: none;
+                color: $color-white;
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+
+        }
     }
 }
 
