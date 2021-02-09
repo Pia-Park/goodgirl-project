@@ -30,3 +30,18 @@ const list = document.querySelector('.shop-product');
         list.appendChild(prodInfo);
     });
   }
+
+  $(function(){
+    $(window).scroll(function(){ 
+      let num = $(this).scrollTop();
+      if( num > 400 ){  
+        $("#nav-search").css("position","fixed");
+        $("#nav-search").css("display","block");
+      }else{
+        $("#nav-search").css("position","absolute");
+        $("#nav-search").css("display","none");
+      }
+    });
+  });
+  
+  

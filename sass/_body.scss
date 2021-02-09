@@ -1,5 +1,7 @@
 @import "./value";
 
+
+
 *, *::before, *::after{
     margin: 0;
     padding: 0;
@@ -13,6 +15,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
+
+    
     .nav-bar{
         @include row;
         background-color: $color-primary;
@@ -39,6 +43,31 @@ body {
         }
     }
     
+    #nav-search{
+        width: 100vw;
+        position: absolute;
+        margin-top: 0;
+        input{
+            border: 0;
+            width: 20rem;
+            height: 3rem;
+            padding: 1rem;
+        }
+        button{
+            height: 3rem;
+            width: 5rem;
+            border: 0;
+            background-color: $color-blue;
+            color: $color-white;
+            margin-right: 3rem;
+            &:hover{
+                color: $color-primary;
+            }
+        }
+
+        
+    }
+
     .main{
         padding: 2rem 0 8rem 0;
         .main-content{

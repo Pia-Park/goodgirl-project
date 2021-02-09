@@ -60,6 +60,32 @@ body .nav-bar .main-nav a:hover {
   color: #D47F7F;
 }
 
+body #nav-search {
+  width: 100vw;
+  position: absolute;
+  margin-top: 0;
+}
+
+body #nav-search input {
+  border: 0;
+  width: 20rem;
+  height: 3rem;
+  padding: 1rem;
+}
+
+body #nav-search button {
+  height: 3rem;
+  width: 5rem;
+  border: 0;
+  background-color: #002D4E;
+  color: #fff;
+  margin-right: 3rem;
+}
+
+body #nav-search button:hover {
+  color: #FFA1A1;
+}
+
 body .main {
   padding: 2rem 0 8rem 0;
 }
