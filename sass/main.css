@@ -133,11 +133,10 @@ body .main .main-content .shop-btn:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 1rem;
+  width: 10rem;
 }
 
 .shop-page .shop-content .shop-product .product-img-hover-icon img {
-  width: 4vw;
-  height: auto;
   padding: 0.3rem;
 }
 

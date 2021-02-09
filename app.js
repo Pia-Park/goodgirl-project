@@ -19,6 +19,10 @@ const list = document.querySelector('.shop-product');
         prodInfo.classList.add('product-info');
         prodInfo.innerHTML = 
         `<img src=${image}>
+        <div class="product-img-hover-icon">
+            <div class="wish-icon"><img src="img/wishicon.png" alt="wish icon"></div>
+            <div class="cart-icon"><img src="img/carticon.png" alt="cart icon"></div>
+        </div>
         <span>${title}</span>
         <span>$${price}</span>`;
         list.appendChild(prodInfo);

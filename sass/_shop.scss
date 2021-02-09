@@ -9,9 +9,8 @@
             .product-img-hover-icon{
                 @include row;
                 padding: 1rem;
+                width: 10rem;
                 img{
-                    width: 4vw;
-                    height: auto;
                     padding: 0.3rem;
                 }
             
