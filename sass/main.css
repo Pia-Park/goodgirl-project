@@ -60,6 +60,10 @@ body .nav-bar .main-nav a:hover {
   color: #D47F7F;
 }
 
+body .main {
+  padding: 2rem 0 8rem 0;
+}
+
 body .main .main-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -98,5 +102,49 @@ body .main .main-content .shop-btn {
 
 body .main .main-content .shop-btn:hover {
   background-color: #D47F7F;
+}
+
+.shop-content {
+  padding: 2rem;
+}
+
+.shop-content .product-img-hover-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1rem;
+}
+
+.shop-content .product-img-hover-icon img {
+  width: 4vw;
+  height: auto;
+  padding: 0.3rem;
+}
+
+.shop-content .product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20vw;
+  padding: 1rem;
+}
+
+.shop-content .product-info img {
+  width: 100%;
+  height: auto;
+}
+
+.shop-content .product-info span {
+  color: #002D4E;
+  background-color: #FFA1A1;
+  padding: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

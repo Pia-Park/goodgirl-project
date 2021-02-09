@@ -1,2 +1,30 @@
 @import "./value";
 
+.shop-content{
+    padding: 2rem;
+    .product-img-hover-icon{
+        @include row;
+        padding: 1rem;
+        img{
+            width: 4vw;
+            height: auto;
+            padding: 0.3rem;
+        }
+    
+    }
+    
+    .product-info{
+        @include column;
+        width: 20vw;
+        padding: 1rem;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        span{
+            color: $color-blue;
+            background-color: $color-primary;
+            padding: 0.5rem;
+        }
+    }
+}

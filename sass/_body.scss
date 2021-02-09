@@ -39,7 +39,7 @@ body {
     }
     
     .main{
-
+        padding: 2rem 0 8rem 0;
         .main-content{
             @include column;
             align-items: center;
