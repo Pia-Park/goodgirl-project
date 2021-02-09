@@ -1,4 +1,7 @@
-
-fetch('https://fakestoreapi.com/products/category/women%20clothing')
+fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
-            .then(json=>console.log(json))
+            .then(json=>{
+                console.log(json)})
+            .catch(err=>{
+                console.log(err);
+            });
