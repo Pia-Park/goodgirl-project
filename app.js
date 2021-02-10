@@ -4,6 +4,7 @@ const API_WOM = 'https://fakestoreapi.com/products/category/women%20clothing';
 const product = document.querySelector('.product-info');
 const list = document.querySelector('.shop-product');
 
+
   async function getData(url){
     const res = await fetch(url)
     const result = await res.json(); 
@@ -22,8 +23,8 @@ const list = document.querySelector('.shop-product');
         prodInfo.innerHTML = 
         `<img src=${image}>
         <div class="product-img-hover-icon">
-            <div class="wish-icon"><img src="img/wishicon.png" alt="wish icon"></div>
-            <div class="cart-icon"><img src="img/carticon.png" alt="cart icon"></div>
+            <div class="wish-icon"><button><img src="img/wishicon.png" alt="wish icon"></button></div>
+            <div class="cart-icon"><button id="cart-add"><img src="img/carticon.png" alt="cart icon"></button></div>
         </div>
         <span>${title}</span>
         <span><b>$${price}</b></span>`;
@@ -43,5 +44,23 @@ const list = document.querySelector('.shop-product');
       }
     });
   });
+
   
+document.querySelector('button').addEventListener('click', function(){
+    alert('AHHHHH');
+    addCartItem(getData);
+});
+
+function addCartItem(item) {
+    const cartList = document.querySelector('.cart-list');
+    const cartItem = document.querySelector('.cart-item');
+    cartItem.innerHTML = `
+        <img src=${item.image} alt="product"/ >
+        <div>
+            <h4>${item.title}</h4>
+            <h5>$${item.price}</h5>
+        </div>
+    `
+    cartList.appendChild(cartItem);
+}
   

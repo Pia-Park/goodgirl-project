@@ -40,6 +40,11 @@ body {
                     color: $color-blue;
                 }
             }
+            .cart-list{
+                li{
+                    list-style: none;
+                }
+            }
         }
     }
     

@@ -60,6 +60,10 @@ body .nav-bar .main-nav a:hover {
   color: #002D4E;
 }
 
+body .nav-bar .main-nav .cart-list li {
+  list-style: none;
+}
+
 body #nav-search {
   width: 100%;
   position: absolute;
@@ -202,6 +206,13 @@ body footer .main-nav2 a:hover {
           flex-direction: row;
   padding: 1rem;
   width: 10rem;
+}
+
+.shop-page .shop-content .shop-product .product-img-hover-icon button {
+  border: 0;
+  border-radius: 50%;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .shop-page .shop-content .shop-product .product-img-hover-icon img {
