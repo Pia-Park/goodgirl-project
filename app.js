@@ -5,17 +5,17 @@ const product = document.querySelector('.product-info');
 const list = document.querySelector('.shop-product');
 
 
-  async function getData(url){
+async function getData(url){
     const res = await fetch(url)
     const result = await res.json(); 
     console.log(result);
     showProducts(result);
+};
 
-  }
   getData(API_WOM);
   getData(API_JEW);
 
-  function showProducts(products){
+function showProducts(products){
     products.forEach((prod)=>{
         const {title, image, price} = prod;
         const prodInfo = document.createElement('div');
@@ -30,9 +30,9 @@ const list = document.querySelector('.shop-product');
         <span><b>$${price}</b></span>`;
         list.appendChild(prodInfo);
     });
-  }
+};
 
-  $(function(){
+$(function(){
     $(window).scroll(function(){ 
       let num = $(this).scrollTop();
       if( num > 60 ){  
@@ -43,8 +43,10 @@ const list = document.querySelector('.shop-product');
         $("#nav-search").css("display","none");
       }
     });
-  });
+});
 
+
+//inae's try-------------------------------//
   
 document.querySelector('button').addEventListener('click', function(){
     alert('AHHHHH');
@@ -62,5 +64,6 @@ function addCartItem(item) {
         </div>
     `
     cartList.appendChild(cartItem);
-}
+};
   
+//inae's try-------------------------------//
