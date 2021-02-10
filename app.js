@@ -48,22 +48,22 @@ $(function(){
 
 //inae's try-------------------------------//
   
-document.querySelector('button').addEventListener('click', function(){
-    alert('AHHHHH');
-    addCartItem(getData);
-});
+// document.querySelector('button').addEventListener('click', function(){
+//     alert('AHHHHH');
+//     addCartItem(getData);
+// });
 
-function addCartItem(item) {
-    const cartList = document.querySelector('.cart-list');
-    const cartItem = document.querySelector('.cart-item');
-    cartItem.innerHTML = `
-        <img src=${item.image} alt="product"/ >
-        <div>
-            <h4>${item.title}</h4>
-            <h5>$${item.price}</h5>
-        </div>
-    `
-    cartList.appendChild(cartItem);
-};
+// function addCartItem(item) {
+//     const cartList = document.querySelector('.cart-list');
+//     const cartItem = document.querySelector('.cart-item');
+//     cartItem.innerHTML = `
+//         <img src=${item.image} alt="product"/ >
+//         <div>
+//             <h4>${item.title}</h4>
+//             <h5>$${item.price}</h5>
+//         </div>
+//     `
+//     cartList.appendChild(cartItem);
+// };
   
 //inae's try-------------------------------//
