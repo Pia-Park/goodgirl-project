@@ -26,7 +26,7 @@ function showProducts(products){
             <div class="wish-icon"><button><img src="img/wishicon.png" alt="wish icon"></button></div>
             <div class="cart-icon"><button id="cart-add"><img src="img/carticon.png" alt="cart icon"></button></div>
         </div>
-        <span>${title}</span>
+        <span class="title">${title}</span>
         <span><b>$${price}</b></span>`;
         list.appendChild(prodInfo);
     });
@@ -67,3 +67,18 @@ $(function(){
 // };
   
 //inae's try-------------------------------//
+
+function filter(){
+    let value = document.getElementById('value').value.toLowerCase();
+    let item = document.getElementsByClassName('product-info');
+
+    for(let i = 0; i < item.length; i++){
+        let prodTitle = item[i].getElementsByClassName('title');
+        if(prodTitle[0].innerHTML.toLowerCase().indexOf(value)>-1){
+            item[i].style.display = "flex";
+        } else {
+            item[i].style.display = "none";
+        }
+    }
+
+}
