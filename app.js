@@ -23,11 +23,11 @@ function showProducts(products){
         prodInfo.innerHTML = 
         `<img src=${image}>
         <div class="product-img-hover-icon">
-            <div class="wish-icon"><button><img src="img/wishicon.png" alt="wish icon"></button></div>
-            <div class="cart-icon"><button id="cart-add"><img src="img/carticon.png" alt="cart icon"></button></div>
+            <button type="button" class="wish-icon"><img src="img/wishicon.png" alt="wish icon"></button>
+            <button class="cart-icon" id="cart-add"><img src="img/carticon.png" alt="cart icon"></button>
         </div>
         <span class="title">${title}</span>
-        <span><b>$${price}</b></span>`;
+        <span class="price"><b>$${price}</b></span>`;
         list.appendChild(prodInfo);
     });
 };
@@ -47,15 +47,22 @@ $(function(){
 
 
 //inae's try-------------------------------//
-  
+// const cartIcon = document.querySelector('button');
 // document.querySelector('button').addEventListener('click', function(){
 //     alert('AHHHHH');
 //     addCartItem(getData);
 // });
 
-// function addCartItem(item) {
-//     const cartList = document.querySelector('.cart-list');
-//     const cartItem = document.querySelector('.cart-item');
+// cartIcon.addEventListener('click', function(){
+//     alert("Add this product!")
+//     addCartItem();
+// })
+
+// function addCartItem() {
+//     const item = document.getElementsByClassName('product-info');
+//     const cartList = document.getElementsByClassName('cart-list');
+//     const cartItem = document.createElement('div');
+//     cartItem.classList.add('cart-item');
 //     cartItem.innerHTML = `
 //         <img src=${item.image} alt="product"/ >
 //         <div>
