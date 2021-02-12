@@ -11,19 +11,29 @@
                 @include row;
                 padding: 1rem;
                 width: 10rem;
-                button{
-                    border: 0;
-                    border-radius: 50%;
-                    outline: 0;
-                    background-color: rgba($color: $color-white, $alpha: 0);
+                // button{
+                //     border: 0;
+                //     // border-radius: 50%;
+                //     outline: 0;
+                //     background-color: rgba($color: $color-white, $alpha: 100);
+                //     &::after{
+                //         background-color: $color-blue;
+                //     }
 
-                }
-                img{
-                    padding: 0.3rem;
+                // }
+                input{
+                    width: 4rem;
                     &:hover{
                         filter: hue-rotate(120deg) brightness(250%);
+
                     }
                 }
+                // img{
+                //     padding: 0.3rem;
+                //     &:hover{
+                //         filter: hue-rotate(120deg) brightness(250%);
+                //     }
+                // }
             
             }
             

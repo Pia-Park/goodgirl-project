@@ -15,6 +15,9 @@ async function getData(url){
   getData(API_WOM);
   getData(API_JEW);
 
+//   <button class="wish-icon"><img src="/img/wishicon.png" alt="wish icon"></button>
+//             <button class="add-cart" id="cart-btn"><img src="/img/carticon.png" alt="cart icon"></button>
+
 function showProducts(products){
     products.forEach((prod)=>{
         const {title, image, price, id} = prod;
@@ -23,8 +26,7 @@ function showProducts(products){
         prodInfo.innerHTML = 
         `<img src=${image} class="image">
         <div class="product-img-hover-icon">
-            <button class="wish-icon"><img src="img/wishicon.png" alt="wish icon"></button>
-            <button class="add-cart" id="cart-btn"><img src="img/carticon.png" alt="cart icon"></button>
+            <input type="image" src="/img/carticon.png" class="add-cart" alt=""/>
         </div>
         <span class="id" style="display:none">${id}</span>
         <span class="title">${title}</span>
@@ -65,9 +67,10 @@ function filter(){
 };
 
 
+
 const cartList = document.getElementById('cart-list');
 
-const btn = document.querySelector('button');
+const btn = document.querySelector('input');
 btn.addEventListener('click', addItem);
 
 function addItem(e){
@@ -75,6 +78,7 @@ function addItem(e){
         const item = e.target.parentElement.parentElement;
         getItemInfo(item);
     }
+    console.log('AAAAA');
 }
 
 function getItemInfo(item){
