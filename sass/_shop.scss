@@ -7,10 +7,19 @@
         .shop-product{
             @include row;
             flex-wrap: wrap;
-            .product-img-hover-icon{
-                @include row;
-                padding: 1rem;
-                width: 10rem;
+            input{
+                width: 4rem;
+                margin-top: -4rem;
+                padding: 0.5rem;
+                &:hover{
+                    filter: hue-rotate(120deg) brightness(250%);
+
+                }
+            }
+            // .product-img-hover-icon{
+            //     @include row;
+            //     padding: 1rem;
+            //     width: 10rem;
                 // button{
                 //     border: 0;
                 //     // border-radius: 50%;
@@ -21,13 +30,13 @@
                 //     }
 
                 // }
-                input{
-                    width: 4rem;
-                    &:hover{
-                        filter: hue-rotate(120deg) brightness(250%);
+                // input{
+                //     width: 2rem;
+                //     &:hover{
+                //         filter: hue-rotate(120deg) brightness(250%);
 
-                    }
-                }
+                //     }
+                // }
                 // img{
                 //     padding: 0.3rem;
                 //     &:hover{
@@ -35,7 +44,7 @@
                 //     }
                 // }
             
-            }
+            // }
             
             .product-info{
                 @include column;
@@ -45,10 +54,14 @@
                     width: 100%;
                     height: auto;
                 }
-                span{
-                    color: $color-blue;
+                .product-text{
+                    @include column;
+                    padding: 1rem;
                     background-color: $color-primary;
-                    padding: 0.5rem;
+
+                    span{
+                        color: $color-blue;
+                    }
                 }
             }
 

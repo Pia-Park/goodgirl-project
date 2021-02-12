@@ -1,3 +1,4 @@
+
 const API_JEW = 'https://fakestoreapi.com/products/category/jewelery';
 const API_WOM = 'https://fakestoreapi.com/products/category/women%20clothing';
 
@@ -71,14 +72,19 @@ function filter(){
 const cartList = document.getElementById('cart-list');
 
 const btn = document.querySelector('input');
-btn.addEventListener('click', addItem);
+
+// btn.addEventListener('click', addItem);
+btn.addEventListener('click', function(){
+    console.log('AAAAA');
+});
+
 
 function addItem(e){
     if(e.target.classList.contains('add-cart')){
         const item = e.target.parentElement.parentElement;
         getItemInfo(item);
+        console.log('AAAAA');
     }
-    console.log('AAAAA');
 }
 
 function getItemInfo(item){

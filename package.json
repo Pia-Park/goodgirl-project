@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Pia-Park/goodgirl-project/issues"
   },
-  "homepage": "https://github.com/Pia-Park/goodgirl-project#readme"
+  "homepage": "https://github.com/Pia-Park/goodgirl-project#readme",
+  "devDependencies": {
+    "mocha-jsdom": "^2.0.0"
+  }
 }
