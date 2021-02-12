@@ -111,10 +111,12 @@ body #nav-search button:hover {
 }
 
 body .main {
-  padding: 2rem 0 8rem 0;
+  padding: 2rem 0 33rem 0;
 }
 
 body .main .main-content {
+  position: absolute;
+  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -261,7 +263,7 @@ body footer .main-nav2 a:hover {
 }
 
 #cart-list {
-  width: 100vw;
+  width: 30vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,6 +274,7 @@ body footer .main-nav2 a:hover {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  float: right;
   padding: 1rem;
   background-color: #FFA1A1;
 }
@@ -285,6 +288,7 @@ body footer .main-nav2 a:hover {
       -ms-flex-direction: row;
           flex-direction: row;
   list-style: none;
+  padding: 0.5rem;
 }
 
 #cart-list .cart-item img {

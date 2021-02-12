@@ -92,8 +92,10 @@ body {
     }
 
     .main{
-        padding: 2rem 0 8rem 0;
+        padding: 2rem 0 33rem 0;
         .main-content{
+            position: absolute;
+            z-index: -1;
             @include column;
             align-items: center;
             padding-top: 10vh;

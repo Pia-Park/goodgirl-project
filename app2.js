@@ -84,7 +84,7 @@ function addItem(e){
     if(e.target.classList.contains('add-cart')){
         const item = e.target.parentElement;
         getItemInfo(item);
-        console.log('AAAAA');
+        // console.log('AAAAA');
     }
 };
 
@@ -112,9 +112,16 @@ function addToCart(item){
     cartList.appendChild(cartItem);
 };
 
+
+
 const cartBtn = document.querySelector('.cart-btn');
 cartBtn.addEventListener('click', ()=>{
     const cartList = document.getElementById('cart-list');
-    cartList.style.display = "flex";
+    if(cartList.style.display="none"){
+        cartList.style.display = "flex";
+    } else {
+        cartList.style.display = "none";
+    }
 
 });
+
