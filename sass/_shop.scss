@@ -76,6 +76,19 @@
     float: right;
     padding: 1rem;
     background-color: $color-primary;
+    .clear{
+        padding-right: 0.5rem;
+        color: $color-blue;
+        &:hover{
+            color: $color-primary-deep;
+        }
+    }
+    .close{
+        color: $color-blue;
+        &:hover{
+            color: $color-primary-deep;
+        }
+    }
     .cart-item{
         @include row;
         list-style: none;

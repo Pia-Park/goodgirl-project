@@ -84,7 +84,7 @@ function addItem(e){
     if(e.target.classList.contains('add-cart')){
         const item = e.target.parentElement;
         getItemInfo(item);
-        // console.log('AAAAA');
+        alert('You added 1itme to cart. Check your cart.');
     }
 };
 
@@ -108,6 +108,7 @@ function addToCart(item){
     <span>${item.title}</span>
     <span><b>${item.price}</b></span>
     </div>
+    <span class="remove"><b>X</b></span> 
     `;
     cartList.appendChild(cartItem);
 };
