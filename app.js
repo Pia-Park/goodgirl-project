@@ -17,15 +17,16 @@ async function getData(url){
 
 function showProducts(products){
     products.forEach((prod)=>{
-        const {title, image, price} = prod;
+        const {title, image, price, id} = prod;
         const prodInfo = document.createElement('div');
         prodInfo.classList.add('product-info');
         prodInfo.innerHTML = 
-        `<img src=${image}>
+        `<img src=${image} class="image">
         <div class="product-img-hover-icon">
-            <button type="button" class="wish-icon"><img src="img/wishicon.png" alt="wish icon"></button>
-            <button class="cart-icon" id="cart-add"><img src="img/carticon.png" alt="cart icon"></button>
+            <button class="wish-icon"><img src="img/wishicon.png" alt="wish icon"></button>
+            <button class="add-cart" id="cart-btn"><img src="img/carticon.png" alt="cart icon"></button>
         </div>
+        <span class="id" style="display:none">${id}</span>
         <span class="title">${title}</span>
         <span class="price"><b>$${price}</b></span>`;
         list.appendChild(prodInfo);
@@ -46,34 +47,7 @@ $(function(){
 });
 
 
-//inae's try-------------------------------//
-// const cartIcon = document.querySelector('button');
-// document.querySelector('button').addEventListener('click', function(){
-//     alert('AHHHHH');
-//     addCartItem(getData);
-// });
 
-// cartIcon.addEventListener('click', function(){
-//     alert("Add this product!")
-//     addCartItem();
-// })
-
-// function addCartItem() {
-//     const item = document.getElementsByClassName('product-info');
-//     const cartList = document.getElementsByClassName('cart-list');
-//     const cartItem = document.createElement('div');
-//     cartItem.classList.add('cart-item');
-//     cartItem.innerHTML = `
-//         <img src=${item.image} alt="product"/ >
-//         <div>
-//             <h4>${item.title}</h4>
-//             <h5>$${item.price}</h5>
-//         </div>
-//     `
-//     cartList.appendChild(cartItem);
-// };
-  
-//inae's try-------------------------------//
 
 function filter(){
     let value = document.getElementById('value').value.toLowerCase();
@@ -88,4 +62,63 @@ function filter(){
         }
     }
 
+};
+
+
+const cartList = document.getElementById('cart-list');
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', addItem);
+
+function addItem(e){
+    if(e.target.classList.contains('add-cart')){
+        const item = e.target.parentElement.parentElement;
+        getItemInfo(item);
+    }
 }
+
+function getItemInfo(item){
+    const itemInfo = item.querySelector('.title').textContent;
+    addToCart(itemInfo);
+}
+
+function addToCart(item){
+    const cartItem = document.createElement('div');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML=`<span>${item.title}</span>`;
+    cartList.appendChild(cartItem);
+}
+
+
+// function addCart(){
+//     let items = document.getElementsByClassName('product-info');
+//     let cart = [];
+//     let cartItem = document.createElement('div');
+//         cartItem.classList.add('cart-item');
+//         cartItem.innerText = 'WOOOOOOOO';
+        
+
+
+    // for(let i = 0; i < items.length; i++){
+    //     // let itemId = items[i].getElementsByClassName('id');
+    //     if(id === items[i].getElementsByClassName('id')){
+    //         console.log('!!!!!!!');
+    //         alert("add this product!");
+
+    //         cart.push(items[i]);
+    //         console.log(cart);
+    //         // let cartItem = document.createElement('div');
+            
+    //         // cartItem.classList.add('cart-item');
+    //         break;
+
+    //     }else{
+    //         console.log('no');
+    //     }
+
+    // }
+
+// };
+
+
+
