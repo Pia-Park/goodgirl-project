@@ -29,7 +29,7 @@ function showProducts(products){
         prodImg.src= image;
         prodImg.classList.add('image');
         const prodInput = document.createElement('input')
-        prodInput.addEventListener('click', () => { alert("clicked!")})
+        prodInput.addEventListener('click',addItem);
         prodInput.type = "image"
         prodInput.src = "/img/carticon.png"
         prodInput.classList.add('add-cart');
@@ -78,6 +78,25 @@ function filter(){
 
 };
 
-window.document.querySelector('input').addEventListener('click', function(){
-    alert('!!!!');
-});
+
+
+function addItem(e){
+    if(e.target.classList.contains('add-cart')){
+        const item = e.target.parentElement;
+        getItemInfo(item);
+        console.log('AAAAA');
+    }
+};
+
+function getItemInfo(item){
+    const itemInfo = item.querySelector('span').textContent;
+    addToCart(itemInfo);
+};
+
+function addToCart(item){
+    const cartItem = document.createElement('div');
+    const cartList = document.getElementById('cart-list');
+    cartItem.classList.add('cart-item');
+    cartItem.innerHTML=`<span>${item.title}</span>`;
+    cartList.appendChild(cartItem);
+};
