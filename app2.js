@@ -89,14 +89,32 @@ function addItem(e){
 };
 
 function getItemInfo(item){
-    const itemInfo = item.querySelector('span').textContent;
+    const itemInfo = {
+        image: item.querySelector('.image').src,
+        title: item.querySelector('.title').textContent,
+        price: item.querySelector('.price').textContent
+        }
+        ;
     addToCart(itemInfo);
 };
 
 function addToCart(item){
-    const cartItem = document.createElement('div');
+    const cartItem = document.createElement('li');
     const cartList = document.getElementById('cart-list');
     cartItem.classList.add('cart-item');
-    cartItem.innerHTML=`<span>${item.title}</span>`;
+    cartItem.innerHTML=`
+    <img src=${item.image}>
+    <div class="item-text">
+    <span>${item.title}</span>
+    <span><b>${item.price}</b></span>
+    </div>
+    `;
     cartList.appendChild(cartItem);
 };
+
+const cartBtn = document.querySelector('.cart-btn');
+cartBtn.addEventListener('click', ()=>{
+    const cartList = document.getElementById('cart-list');
+    cartList.style.display = "flex";
+
+});

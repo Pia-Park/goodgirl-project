@@ -68,3 +68,30 @@
         }
     }
 }
+
+#cart-list{
+    width: 100vw;
+    @include column;
+    align-items: flex-end;
+    padding: 1rem;
+    background-color: $color-primary;
+    .cart-item{
+        @include row;
+        list-style: none;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .item-text{
+            @include row;
+            width: 20vw;
+            flex-wrap: wrap;
+            padding-left: 1rem;
+            padding-bottom: 0.5rem;
+            color: $color-blue;
+        }
+        
+
+    }
+}

@@ -40,6 +40,13 @@ body {
                     color: $color-blue;
                 }
             }
+            .cart-btn{
+                border: 0;
+                outline: 0;
+                background-color: $color-primary;
+                color: $color-white;
+                font-size: 1rem;
+            }
             .cart-list{
                 li{
                     list-style: none;
@@ -52,7 +59,17 @@ body {
         width: 100%;
         position: absolute;
         top: -5px;
-        
+
+        .cart-btn{
+            border: 0;
+            outline: 0;
+            background-color: $color-primary;
+            color: $color-white;
+            font-size: 1rem;
+            &:hover{
+                color: $color-blue;
+            }
+        }
         input{
             border: 0;
             width: 20rem;
