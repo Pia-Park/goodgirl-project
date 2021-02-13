@@ -53,9 +53,15 @@ $(function(){
       if( num > 60 ){  
         $("#nav-search").css("position","fixed");
         $("#nav-search").css("display","flex");
+        $("#cart-list").css("position", "fixed");
+        $("#cart-list").css("margin-right", "0");
+
       }else{
         $("#nav-search").css("position","absolute");
         $("#nav-search").css("display","none");
+        $("#cart-list").css("position", "absolute");
+        $("#cart-list").css("right", "0");
+
       }
     });
 });
@@ -127,6 +133,14 @@ cartBtn.addEventListener('click', ()=>{
     } else {
         cartList.style.display = "none";
     }
+
+});
+
+const cartBtn2 = document.querySelector('.cart-btn2');
+cartBtn2.addEventListener('click', ()=>{
+    const cartList = document.getElementById('cart-list');
+        cartList.style.display = "flex";
+    
 
 });
 
