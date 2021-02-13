@@ -279,6 +279,10 @@ body footer .main-nav2 a:hover {
   background-color: #FFA1A1;
 }
 
+#cart-list .total {
+  color: #002D4E;
+}
+
 #cart-list .clear {
   padding-right: 0.5rem;
   color: #002D4E;

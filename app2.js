@@ -84,7 +84,6 @@ function filter(){
 
 };
 
-totalPrice();
 
 
 function addItem(e){
@@ -92,6 +91,9 @@ function addItem(e){
         const item = e.target.parentElement;
         getItemInfo(item);
         alert('You added 1itme to cart. Check your cart.');
+
+        totalPrice();
+        
     }
 };
 
@@ -108,18 +110,33 @@ function addToCart(item){
     const cartItem = document.createElement('div');
     cartItem.classList.add('div-list');
     const cartList = document.getElementById('cart-list');
+
     const items = document.createElement('li');
     items.classList.add('cart-item');
     items.innerHTML=`
     <img src=${item.image}>
-    <div class="item-text">
-    <span>${item.title}</span>
-    <span><b>${item.price}</b></span>
-    </div>
-    <span onclick="this.parentElement.parentElement.removeChild(this.parentElement.parentElement.firstChild)" class="remove"><b>X</b></span> 
     `;
+
+    const itemText = document.createElement('div');
+    itemText.classList.add('item-text');
+    itemText.innerHTML = `
+    <span>${item.title}</span>
+    `;
+
+    const itemPrice = document.createElement('span');
+    itemPrice.classList.add('price');
+    itemPrice.innerHTML=`<span><b>${item.price}</b></span>`;
+
+    const deleteItem = document.createElement('div');
+    deleteItem.innerHTML =`<span onclick="this.parentElement.parentElement.removeChild(this.parentElement.parentElement.firstChild)" class="remove"><b>X</b></span> 
+    `;
+
+    itemText.appendChild(itemPrice);
+    items.appendChild(itemText);
+    items.appendChild(deleteItem);
     cartItem.appendChild(items);
     cartList.appendChild(cartItem);
+
 };
 
 
@@ -146,19 +163,19 @@ cartBtn2.addEventListener('click', ()=>{
 
 
 function totalPrice(){
-    const cartList = document.getElementById('cart-list');
-    const cartItem = document.getElementsByClassName('cart-item');
-    
+    // const cartList = document.getElementById('cart-list');
+    const cartItems = document.getElementsByClassName('cart-item');
+
     let total = 0;
-    for(let i = 0; i < cartItem.length; i++){
-        let prodPrice = cartItem[i].getElementsByClassName('price');
+
+    for(let i = 0; i < cartItems.length; i++){
+        let prodPrice = cartItems[i].querySelector('.price');
         let numPice = parseFloat(prodPrice.innerText.replace('$', ''));
         total = total + numPice;
 
     }
-    const totalCartPrice = document.createElement('div');
-    totalCartPrice.classList.add('total');
-    totalCartPrice.innerHTML = `<span>Total Price : $${total}</span>`;
-    cartList.appendChild(totalCartPrice);
+    const totalText = document.getElementById('total-text');
+    totalText.innerText = 'Total Price: $' + total;
 }
+
 

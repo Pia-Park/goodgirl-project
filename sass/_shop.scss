@@ -76,6 +76,13 @@
     float: right;
     padding: 1rem;
     background-color: $color-primary;
+
+    .total{
+        color: $color-blue;
+        // font-size: 1rem;
+        // font-weight: 700;
+    }
+
     .clear{
         padding-right: 0.5rem;
         color: $color-blue;
