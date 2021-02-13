@@ -84,6 +84,7 @@ function filter(){
 
 };
 
+totalPrice();
 
 
 function addItem(e){
@@ -99,8 +100,7 @@ function getItemInfo(item){
         image: item.querySelector('.image').src,
         title: item.querySelector('.title').textContent,
         price: item.querySelector('.price').textContent
-        }
-        ;
+        };
     addToCart(itemInfo);
 };
 
@@ -144,11 +144,21 @@ cartBtn2.addEventListener('click', ()=>{
 
 });
 
-// document.querySelector('.clear').addEventListener('click', clearCart);
-// function clearCart(){
-//     const divList = document.getElementsByClassName('div-list');
-//     divList.removeChild(divList.firstChild);
- 
-// }
 
+function totalPrice(){
+    const cartList = document.getElementById('cart-list');
+    const cartItem = document.getElementsByClassName('cart-item');
+    
+    let total = 0;
+    for(let i = 0; i < cartItem.length; i++){
+        let prodPrice = cartItem[i].getElementsByClassName('price');
+        let numPice = parseFloat(prodPrice.innerText.replace('$', ''));
+        total = total + numPice;
+
+    }
+    const totalCartPrice = document.createElement('div');
+    totalCartPrice.classList.add('total');
+    totalCartPrice.innerHTML = `<span>Total Price : $${total}</span>`;
+    cartList.appendChild(totalCartPrice);
+}
 
