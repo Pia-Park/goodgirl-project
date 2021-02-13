@@ -181,6 +181,10 @@ function totalPrice(){
     }
     const totalText = document.getElementById('total-text');
     totalText.innerText = 'Total Price: $' + total;
+    const cartText = document.getElementById('add');
+    cartText.innerText = 'CART(' + cartItems.length + ')';
+    const cartText1 = document.getElementById('add2');
+    cartText1.innerText = 'CART(' + cartItems.length + ')';
 }
 
 
