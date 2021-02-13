@@ -128,7 +128,8 @@ function addToCart(item){
     itemPrice.innerHTML=`<span><b>${item.price}</b></span>`;
 
     const deleteItem = document.createElement('div');
-    deleteItem.innerHTML =`<span onclick="this.parentElement.parentElement.removeChild(this.parentElement.parentElement.firstChild)" class="remove"><b>X</b></span> 
+    deleteItem.classList.add('delete-item');
+    deleteItem.innerHTML =`<span onclick="this.parentElement.parentElement.parentElement.removeChild(this.parentElement.parentElement.parentElement.firstChild); totalPrice();" class="remove"><b>X</b></span> 
     `;
 
     itemText.appendChild(itemPrice);
@@ -140,6 +141,10 @@ function addToCart(item){
 };
 
 
+// const deleteBtn = document.querySelector('.delete-item');
+// deleteBtn.addEventListener('click', ()=>{
+//     totalPrice();
+// });
 
 
 const cartBtn = document.querySelector('.cart-btn');
