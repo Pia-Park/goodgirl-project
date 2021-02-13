@@ -285,7 +285,7 @@ body footer .main-nav2 a:hover {
 
 #cart-list .clear {
   padding-right: 0.5rem;
-  color: #002D4E;
+  color: #fff;
 }
 
 #cart-list .clear:hover {
@@ -293,7 +293,7 @@ body footer .main-nav2 a:hover {
 }
 
 #cart-list .close {
-  color: #002D4E;
+  color: #fff;
 }
 
 #cart-list .close:hover {
