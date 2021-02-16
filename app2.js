@@ -141,10 +141,7 @@ function addToCart(item){
 };
 
 
-// const deleteBtn = document.querySelector('.delete-item');
-// deleteBtn.addEventListener('click', ()=>{
-//     totalPrice();
-// });
+
 
 
 const cartBtn = document.querySelector('.cart-btn');
@@ -188,3 +185,14 @@ function totalPrice(){
 }
 
 
+
+{/* <span onclick="document.querySelector('.div-list').removeChild(document.querySelector('.div-list').firstChild); totalPrice();" class="clear"><b>CLEAR</b></span>  */}
+
+function clearCart() {
+    const cartItems = document.getElementsByClassName('div-list');
+
+    for(let i = 0; i < cartItems.length; i++){
+        cartItems[i].removeChild(cartItems[i].lastChild);
+    }
+
+}
